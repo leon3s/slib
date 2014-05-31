@@ -20,17 +20,19 @@
 # define DECI			"0123456789"
 # define HEXA			"0123456789abcdef"
 
+# define BSIZE			2096
+
 /*
 **						STD STRUCT FOR WORDS
 */
 
-typedef struct	s_word	t_word;
+typedef struct	s_list	t_list;
 
-struct					s_word
+struct					s_list
 {
-	char				*str;
-	size_t				len;
-	t_word				*next;
+	char				str[BSIZE];
+	ssize_t				len;
+	t_list				*next;
 };
 
 /*
@@ -63,6 +65,12 @@ size_t					print_ptr(const int fd, va_list arg);
 */
 
 ssize_t					print(const int fd, const char const *format, ...);
+
+/*
+**						Read ANY FD
+*/
+
+char					*mread(const int fd);
 
 /*
 **						GUARDIAN

@@ -10,6 +10,7 @@ SRCS		=	num.c \
 				lp.c \
 				print.c \
 				count.c \
+				mread.c
 
 SRC		=	$(addprefix $(SRCPATH), $(SRCS))
 
