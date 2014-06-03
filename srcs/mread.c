@@ -1,6 +1,4 @@
-#include "my.h"
-
-#include <stdio.h>
+#include "slib.h"
 
 static char	*reverse_list(t_list *s)
 {

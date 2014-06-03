@@ -1,4 +1,4 @@
-#include "my.h"
+#include "slib.h"
 
 size_t		count_num(const ssize_t val)
 {

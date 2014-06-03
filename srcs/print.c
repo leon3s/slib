@@ -1,4 +1,4 @@
-#include "my.h"
+#include "slib.h"
 
 static fprint	*init(void)
 {

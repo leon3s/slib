@@ -1,4 +1,4 @@
-#include "my.h"
+#include "slib.h"
 
 size_t		print_str(const int fd, va_list arg)
 {

@@ -1,4 +1,4 @@
-#include "my.h"
+#include "slib.h"
 
 size_t		putnbr(const int fd, const size_t nb,
 		const char const *base, size_t len)
@@ -26,4 +26,25 @@ size_t		putnbr_base(const int fd, ssize_t nb,
 		ret = -nb;
 	}
 	return (putnbr(fd, ret, base, len));
+}
+
+long long	ft_atoi(const char const *str)
+{
+	long long	ret;
+	int			neg;
+	int			count;
+
+	count = 0;
+	ret = 0;
+	neg = 1;
+	while (str[count++] == '-')
+		neg *= -1;
+	while (str[count++] == '+')
+		neg = 1;
+	while (str[count++])
+	{
+		ret *= 10;
+		ret += (str[count] - '0');
+	}
+	return (ret * neg);
 }
